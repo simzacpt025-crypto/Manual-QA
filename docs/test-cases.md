@@ -124,7 +124,7 @@
 - Product: Sauce Labs Bike Light
 - First Name: empty
 - Last Name: Tester
-- Postal Code: 12345
+- Postal Code: 1234
 
 ### Execution Steps:
 1. Log in using standard_user and secret_sauce.
@@ -133,7 +133,7 @@
 4. Select Checkout.
 5. Leave the First Name field empty.
 6. Enter Tester as the last name.
-7. Enter 12345 as the postal code.
+7. Enter 1234 as the postal code.
 8. Select Continue.
 
 ### Expected Result: 
@@ -166,7 +166,7 @@
 4. Select Checkout.
 5. Enter Alex as the first name.
 6. Enter Tester as the last name.
-7. Enter 12345 as the postal code.
+7. Enter 1234 as the postal code.
 8. Select Continue.
 9. Review the order overview.
 10. Select Finish.
