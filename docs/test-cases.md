@@ -48,7 +48,7 @@
 
 ### Observed Actual Result:
 
-### Status: BLOCKED
+### Status: PASS
 
 ### Evidence: ../evidence/tc-02-locked-out.png
 
@@ -78,7 +78,7 @@
 
 ### Observed Actual Result: PASS
 
-### Status:
+### Status: PASS
 
 ### Evidence: ../evidence/tc-03-cart-bike-light.png
 
@@ -107,7 +107,7 @@
 
 ### Observed Actual Result:
 
-### Status:
+### Status: PASS
 
 ### Evidence: ../evidence/tc-04-cart-item-removed.png
 
@@ -141,7 +141,7 @@
 
 ### Observed Actual Result:
 
-### Status:
+### Status: PASS
 
 ### Evidence: ../evidence/tc-05-first-name-required.png
 
@@ -176,6 +176,6 @@
 
 ### Observed Actual Result:
 
-### Status:
+### Status: PASS
 
 ### Evidence: ../evidence/tc-06-order-complete.png
