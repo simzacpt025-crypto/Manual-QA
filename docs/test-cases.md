@@ -61,7 +61,7 @@
 ### Test Priority: High
 ### Test Data:
 - Username: standard_user
- -Password: secret_sauce
+- Password: secret_sauce
 
 ### Product: 
 - Sauce Labs Bike Light
