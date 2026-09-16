@@ -22,3 +22,8 @@ The execution summary accounts for all six executed test cases.
 | Cart risk — lost cart contents                                          | [TC-03](test-cases.md#tc-03---selected-product-remains-in-cart), [TC-04](test-cases.md#tc-04---selected-product-is-removed-from-cart) | Pass          | [TC-03 evidence](../evidence/tc-03-cart-bike-light.png), [TC-04 evidence](../evidence/tc-04-cart-item-removed.png) | None                        |
 | Validation risk — incorrect validation                                  | [TC-05](test-cases.md#tc-05---first-name-validation)                                                                                  | Pass          | [TC-05 evidence](../evidence/tc-05-first-name-required.png)                                                        | [BUG-001](defect-report.md) |
 | Order-completion risk — failed order completion                         | [TC-06](test-cases.md#tc-06---shopper-completes-checkout)                                                                             | Pass          | [TC-06 evidence](../evidence/tc-06-order-complete.png)                                                             | None                        |
+| Authentication risk — blank username      | AUTH-01    | Pass          | Not captured | None   |
+| Authentication risk — blank password      | AUTH-02    | Pass          | Not captured | None   |
+| Authentication risk — invalid credentials | AUTH-03    | Pass          | Not captured | None   |
+| Authentication risk — locked account      | AUTH-04    | Pass          | Not captured | None   |
+
