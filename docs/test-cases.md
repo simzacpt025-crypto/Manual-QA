@@ -188,3 +188,155 @@
 | AUTH-02 | Blank password      | `standard_user`   |                    | `Password is required`                                        |`Password is required`|`Pass`|
 | AUTH-03 | Invalid credentials | `invalid_user`    | `invalid_password` | `Username and password do not match any user in this service` |`password do not match any user in this service`|`Pass`|
 | AUTH-04 | Locked account      | `locked_out_user` | `secret_sauce`     | `Sorry, this user has been locked out`                        |`Sorry, this user has been locked out`|`Pass`|
+
+## TC-07 — Checkout requires a last name
+
+- **Requirement/Risk:** Validation risk
+- **Priority:** Medium
+- **Preconditions:**
+  - Swag Labs is open in Microsoft Edge.
+  - The application state has been reset.
+  - The user is logged out.
+- **Test Data:**
+  - Username: `standard_user`
+  - Password: `secret_sauce`
+  - Product: Sauce Labs Bike Light
+  - First Name: `Alex`
+  - Last Name: empty
+  - Postal Code: `12345`
+- **Steps:**
+  1. Log in as `standard_user`.
+  2. Add Sauce Labs Bike Light to the cart.
+  3. Open the cart.
+  4. Select Checkout.
+  5. Enter `Alex` in the First Name field.
+  6. Leave the Last Name field empty.
+  7. Enter `12345` in the Postal Code field.
+  8. Select Continue.
+- **Expected Result:** The application displays `Last Name is required`.
+- **Actual Result:**
+- **Status:**
+- **Evidence:**
+
+## TC-08 — Checkout requires a postal code
+
+- **Requirement/Risk:** Validation risk
+- **Priority:** Medium
+- **Preconditions:**
+  - Swag Labs is open in Microsoft Edge.
+  - The application state has been reset.
+  - The user is logged out.
+- **Test Data:**
+  - Username: `standard_user`
+  - Password: `secret_sauce`
+  - Product: Sauce Labs Bike Light
+  - First Name: `Alex`
+  - Last Name: `Tester`
+  - Postal Code: empty
+- **Steps:**
+  1. Log in as `standard_user`.
+  2. Add Sauce Labs Bike Light to the cart.
+  3. Open the cart.
+  4. Select Checkout.
+  5. Enter `Alex` in the First Name field.
+  6. Enter `Tester` in the Last Name field.
+  7. Leave the Postal Code field empty.
+  8. Select Continue.
+- **Expected Result:** The application displays `Postal Code is required`.
+- **Actual Result:**
+- **Status:**
+- **Evidence:**
+
+## TC-09 — All checkout fields are required
+
+- **Requirement/Risk:** Validation risk
+- **Priority:** High
+- **Preconditions:**
+  - Swag Labs is open in Microsoft Edge.
+  - The application state has been reset.
+  - The user is logged out.
+- **Test Data:**
+  - Username: `standard_user`
+  - Password: `secret_sauce`
+  - Product: Sauce Labs Bike Light
+  - First Name: empty
+  - Last Name: empty
+  - Postal Code: empty
+- **Steps:**
+  1. Log in as `standard_user`.
+  2. Add Sauce Labs Bike Light to the cart.
+  3. Open the cart.
+  4. Select Checkout.
+  5. Leave all checkout fields empty.
+  6. Select Continue.
+- **Expected Result:** The application displays `First Name is required` and checkout does not proceed.
+- **Actual Result:**
+- **Status:**
+- **Evidence:**
+
+## TC-10 — Checkout can be cancelled
+
+- **Requirement/Risk:** Navigation risk
+- **Priority:** Medium
+- **Preconditions:**
+  - Swag Labs is open in Microsoft Edge.
+  - The application state has been reset.
+  - The user is logged out.
+- **Test Data:**
+  - Username: `standard_user`
+  - Password: `secret_sauce`
+  - Product: Sauce Labs Bike Light
+- **Steps:**
+  1. Log in as `standard_user`.
+  2. Add Sauce Labs Bike Light to the cart.
+  3. Open the cart.
+  4. Select Checkout.
+  5. Select Cancel.
+- **Expected Result:** The application returns to the cart without completing checkout, and the product remains in the cart.
+- **Actual Result:**
+- **Status:**
+- **Evidence:**
+
+## TC-11 — Shopper can continue shopping from the cart
+
+- **Requirement/Risk:** Navigation risk
+- **Priority:** Medium
+- **Preconditions:**
+  - Swag Labs is open in Microsoft Edge.
+  - The application state has been reset.
+  - The user is logged out.
+- **Test Data:**
+  - Username: `standard_user`
+  - Password: `secret_sauce`
+  - Product: Sauce Labs Bike Light
+- **Steps:**
+  1. Log in as `standard_user`.
+  2. Add Sauce Labs Bike Light to the cart.
+  3. Open the cart.
+  4. Select Continue Shopping.
+- **Expected Result:** The application returns to the inventory page and the cart still contains Sauce Labs Bike Light.
+- **Actual Result:**
+- **Status:**
+- **Evidence:**
+
+## TC-12 — Shopper can remove an item from the cart
+
+- **Requirement/Risk:** Cart integrity risk
+- **Priority:** Medium
+- **Preconditions:**
+  - Swag Labs is open in Microsoft Edge.
+  - The application state has been reset.
+  - The user is logged out.
+- **Test Data:**
+  - Username: `standard_user`
+  - Password: `secret_sauce`
+  - Product: Sauce Labs Bike Light
+- **Steps:**
+  1. Log in as `standard_user`.
+  2. Add Sauce Labs Bike Light to the cart.
+  3. Open the cart.
+  4. Select Remove for Sauce Labs Bike Light.
+- **Expected Result:** Sauce Labs Bike Light is removed, the cart shows no product, and the cart badge is no longer displayed.
+- **Actual Result:**
+- **Status:**
+- **Evidence:**
