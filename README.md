@@ -1,19 +1,32 @@
 # Manual-QA case study of the Swag Labs checkout journey, covering risk-based test design, execution evidence, defect reporting, and traceability.
 
-This repository captures a manual QA validation of the Swag Labs end-to-end checkout flow. It includes the test strategy, executed test cases, evidence screenshots, and defect documentation used to assess the release readiness of the tested journey.
+This repository captures a manual QA validation of the Swag Labs end-to-end checkout flow. It includes the test strategy, executed test cases, additional checkout-validation scenarios, authentication decision-table checks, evidence screenshots, and defect documentation used to assess the journey from login through order completion.
 
 ## Execution Summary
+
+The latest test-case update documents 12 end-to-end test cases and four authentication decision-table checks. The original execution evidence covers the first six end-to-end cases and the four authentication checks. The newly added checkout-validation and navigation scenarios (TC-07 through TC-12) still require execution evidence.
 
 | Status | Count |
 |---|---:|
 | Pass | 10 |
 | Fail | 0 |
 | Blocked | 0 |
-| **Total** | **10** |
+| Pending execution | 6 |
+| **Total documented checks** | **16** |
+
+## Coverage Added in the Latest Test-Case Update
+
+- Checkout validation when the last name is blank (TC-07).
+- Checkout validation when the postal code is blank (TC-08).
+- Validation when all checkout fields are blank (TC-09).
+- Checkout cancellation and cart preservation (TC-10).
+- Continuing shopping from the cart (TC-11).
+- Removing an item and clearing the cart badge (TC-12).
+- Authentication checks for blank credentials, invalid credentials, and locked accounts.
 
 ## Release Recommendation
 
-The tested login-to-checkout journey is recommended for the next review stage based on the recorded results. All ten executed checks passed. This recommendation is limited to the tested requirements and the evidence captured during this manual QA review.
+The tested login-to-checkout journey is recommended for the next review stage based on the recorded results. All ten executed checks passed. This recommendation is limited to the tested requirements and evidence currently recorded; TC-07 through TC-12 should be executed and documented before making a final release decision for the expanded coverage.
 
 ## Project Structure
 
@@ -43,11 +56,11 @@ Manual-QA/
 
 ## Repository Contents
 
-- `README.md` — overview of the manual QA case study and execution summary.
+- `README.md` — overview of the manual QA case study, coverage, and execution summary.
 - `docs/` — formal QA documentation including strategy, execution, defects, and traceability.
   - `baseline-run.md` — baseline test execution notes.
   - `defect-report.md` — defect details and impact analysis.
-  - `test-cases.md` — manual test cases for the journey.
+  - `test-cases.md` — 12 manual end-to-end test cases plus authentication decision-table checks.
   - `test-strategy.md` — risk-based testing plan.
   - `traceability.md` — mapping between requirements, tests, and evidence.
 - `evidence/` — screenshots that capture observed application behavior during execution.
@@ -59,8 +72,9 @@ This repository is organized to support a manual QA workflow:
 
 1. Review the test strategy and test cases.
 2. Compare executed outcomes against the expected behavior.
-3. Inspect defect and traceability records.
-4. Use evidence images to validate execution history and results.
+3. Execute and attach evidence for the pending scenarios.
+4. Inspect defect and traceability records.
+5. Use evidence images to validate execution history and results.
 
 This structure is intended to make the project easy to review, audit, and extend as additional testing evidence is added.
 
