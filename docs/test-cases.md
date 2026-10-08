@@ -271,7 +271,7 @@
 
 ### Status: PASS
 
-### Evidence:
+### Evidence: ../evidence/tc-08-checkout-requires-a-postal-code.png
 
 ## TC-09 — All checkout fields are required
 
@@ -308,7 +308,7 @@
 
 ### Status: PASS
 
-### Evidence:
+### Evidence: ../evidence/tc-09- all-checkout-fields-are-required.png
 
 ## TC-10 — Checkout can be cancelled
 
@@ -341,7 +341,7 @@
 
 ### Status: PASS
 
-### Evidence:
+### Evidence: ../evidence/tc-10-checkout-can-be-cancelled.png
 
 ## TC-11 — Shopper can continue shopping from the cart
 
@@ -373,7 +373,7 @@
 
 ### Status: PASS
 
-### Evidence:
+### Evidence: ../evidence/tc-11-shopper-can-continue-shopping-from-cart.png
 
 ## TC-12 — Shopper can remove an item from the cart
 
@@ -404,4 +404,4 @@
 
 ### Status: PASS
 
-### Evidence:
+### Evidence: ../evidence/tc-12-shopper-can-remove-an-item-from-the-cart.png
