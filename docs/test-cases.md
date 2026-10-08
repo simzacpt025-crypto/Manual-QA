@@ -232,7 +232,7 @@
 
 ### Status: PASS
 
-### Evidence:
+### Evidence: ../evidence/tc-07-checkout-requires-a-last-name.png
 
 ## TC-08 — Checkout requires a postal code
 
