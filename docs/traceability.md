@@ -24,11 +24,6 @@ The execution summary accounts for all twelve executed test cases.
 | Order-completion risk — failed order completion                         | [TC-06](test-cases.md#tc-06---shopper-completes-checkout)                                                            |
 | Navigation risk — checkout cancellation and continue-shopping           | [TC-10](test-cases.md#tc-10---checkout-can-be-cancelled), [TC-11](test-cases.md#tc-11---shopper-can-continue-shopping-from-the-cart) |
 | Cart integrity risk — remove item from cart                             | [TC-12](test-cases.md#tc-12---shopper-can-remove-an-item-from-the-cart)                                              |
-
-## Evidence Links
-
-| Test Case | Evidence |
-| --------- | -------- |
 | TC-07 — Checkout requires a last name | [Evidence](../evidence/tc-07-checkout-requires-a-last-name.png) |
 | TC-08 — Checkout requires a postal code | [Evidence](../evidence/tc-08-checkout-requires-a-postal-code.png) |
 | TC-09 — All checkout fields are required | [Evidence](../evidence/tc-09-%20all-checkout-fields-are-required.png) |
