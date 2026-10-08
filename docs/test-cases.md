@@ -1,5 +1,14 @@
 # Swag Labs Test Cases
 
+## Authentication Decision Table
+
+| Check   | Condition           | Username          | Password           | Expected Result                                               | Actual Result | Status |
+| ------- | ------------------- | ----------------- | ------------------ | ------------------------------------------------------------- | ------------- | ------ |
+| AUTH-01 | Blank username      |                   | `secret_sauce`     | `Username is required`                                        |`Username is required`|`Pass`|
+| AUTH-02 | Blank password      | `standard_user`   |                    | `Password is required`                                        |`Password is required`|`Pass`|
+| AUTH-03 | Invalid credentials | `invalid_user`    | `invalid_password` | `Username and password do not match any user in this service` |`password do not match any user in this service`|`Pass`|
+| AUTH-04 | Locked account      | `locked_out_user` | `secret_sauce`     | `Sorry, this user has been locked out`                        |`Sorry, this user has been locked out`|`Pass`|
+
 ## TC-01 — Valid shopper can reach inventory
 
 ### Test Case ID: TC-01
@@ -21,6 +30,7 @@
 - The inventory/products page is displayed after the login form is submitted.
 
 ### Observed Actual Result:
+- The inventory/products page is displayed after the login form is submitted.
 
 ### Status: PASS
 
@@ -47,6 +57,7 @@
 - Sorry, this user has been locked out. appears on the login page.
 
 ### Observed Actual Result:
+- Sorry, this user has been locked out. appears on the login page.
 
 ### Status: PASS
 
@@ -76,7 +87,8 @@
 ### Expected Result: 
 - Sauce Labs Bike Light is present in the cart with a quantity of 1.
 
-### Observed Actual Result: PASS
+### Observed Actual Result:
+- Sauce Labs Bike Light is present in the cart with a quantity of 1.
 
 ### Status: PASS
 
@@ -106,6 +118,7 @@
 - Sauce Labs Bike Light is absent from the cart after it is removed.
 
 ### Observed Actual Result:
+- Sauce Labs Bike Light is absent from the cart after it is removed.
 
 ### Status: PASS
 
@@ -140,6 +153,7 @@
 - First Name is required appears and checkout does not proceed.
 
 ### Observed Actual Result:
+- First Name is required appears and checkout does not proceed.
 
 ### Status: PASS
 
@@ -175,65 +189,71 @@
 - Thank you for your order! appears after completing checkout.
 
 ### Observed Actual Result:
+- Thank you for your order! appears after completing checkout.
 
 ### Status: PASS
 
 ### Evidence: ../evidence/tc-06-order-complete.png
 
-## Authentication Decision Table
-
-| Check   | Condition           | Username          | Password           | Expected Result                                               | Actual Result | Status |
-| ------- | ------------------- | ----------------- | ------------------ | ------------------------------------------------------------- | ------------- | ------ |
-| AUTH-01 | Blank username      |                   | `secret_sauce`     | `Username is required`                                        |`Username is required`|`Pass`|
-| AUTH-02 | Blank password      | `standard_user`   |                    | `Password is required`                                        |`Password is required`|`Pass`|
-| AUTH-03 | Invalid credentials | `invalid_user`    | `invalid_password` | `Username and password do not match any user in this service` |`password do not match any user in this service`|`Pass`|
-| AUTH-04 | Locked account      | `locked_out_user` | `secret_sauce`     | `Sorry, this user has been locked out`                        |`Sorry, this user has been locked out`|`Pass`|
-
 ## TC-07 — Checkout requires a last name
 
-- **Requirement/Risk:** Validation risk
-- **Priority:** Medium
-- **Preconditions:**
+### Requirement/Risk: Validation risk
+
+### Priority: Medium
+
+### Preconditions:
   - Swag Labs is open in Firefox.
   - Application state has been reset.
   - The user is logged out.
-- **Test Data:**
+    
+### Test Data:
   - Username: `standard_user`
   - Password: `secret_sauce`
   - Product: Sauce Labs Bike Light
   - First Name: `Alex`
   - Last Name: empty
   - Postal Code: `12345`
-- **Steps:**
+    
+### Steps:
   1. Log in as `standard_user`.
   2. Add Sauce Labs Bike Light to the cart.
   3. Open the cart.
   4. Select Checkout.
   5. Enter `Alex` in the First Name field.
   6. Leave the Last Name field empty.
-  7. Enter `12345` in the Postal Code field.
+  7. Enter `1234` in the Postal Code field.
   8. Select Continue.
-- **Expected Result:** The application displays `Last Name is required`.
-- **Actual Result:**
-- **Status:**
-- **Evidence:**
+     
+### Expected Result: 
+-The application displays `Last Name is required`.
+
+### Actual Result:
+-The application displays `Last Name is required`.
+
+### Status: PASS
+
+### Evidence:
 
 ## TC-08 — Checkout requires a postal code
 
-- **Requirement/Risk:** Validation risk
-- **Priority:** Medium
-- **Preconditions:**
+### Requirement/Risk: Validation risk
+
+### Priority: Medium
+
+### Preconditions:
   - Swag Labs is open in Firefox.
   - The application state has been reset.
   - The user is logged out.
-- **Test Data:**
+    
+### Test Data:
   - Username: `standard_user`
   - Password: `secret_sauce`
   - Product: Sauce Labs Bike Light
   - First Name: `Alex`
   - Last Name: `Tester`
   - Postal Code: empty
-- **Steps:**
+    
+### Steps:
   1. Log in as `standard_user`.
   2. Add Sauce Labs Bike Light to the cart.
   3. Open the cart.
@@ -242,101 +262,146 @@
   6. Enter `Tester` in the Last Name field.
   7. Leave the Postal Code field empty.
   8. Select Continue.
-- **Expected Result:** The application displays `Postal Code is required`.
-- **Actual Result:**
-- **Status:**
-- **Evidence:**
+     
+### Expected Result:
+-The application displays `Postal Code is required`.
+
+### Actual Result:
+-The application displays `Postal Code is required`.
+
+### Status: PASS
+
+### Evidence:
 
 ## TC-09 — All checkout fields are required
 
-- **Requirement/Risk:** Validation risk
-- **Priority:** High
-- **Preconditions:**
-  - Swag Labs is open in Frefox.
+### Requirement/Risk: Validation risk
+
+### Priority: High
+
+### Preconditions:
+  - Swag Labs is open in Firefox.
   - The application state has been reset.
   - The user is logged out.
-- **Test Data:**
+    
+### Test Data:
   - Username: `standard_user`
   - Password: `secret_sauce`
   - Product: Sauce Labs Bike Light
   - First Name: empty
   - Last Name: empty
   - Postal Code: empty
-- **Steps:**
+    
+### Steps:
   1. Log in as `standard_user`.
   2. Add Sauce Labs Bike Light to the cart.
   3. Open the cart.
   4. Select Checkout.
   5. Leave all checkout fields empty.
   6. Select Continue.
-- **Expected Result:** The application displays `First Name is required` and checkout does not proceed.
-- **Actual Result:**
-- **Status:**
-- **Evidence:**
+     
+### Expected Result:
+-The application displays `First Name is required` and checkout does not proceed.
+
+### Actual Result:
+-The application displays `First Name is required` and checkout does not proceed.
+
+### Status: PASS
+
+### Evidence:
 
 ## TC-10 — Checkout can be cancelled
 
-- **Requirement/Risk:** Navigation risk
-- **Priority:** Medium
-- **Preconditions:**
+### Requirement/Risk: Navigation risk
+
+### Priority: Medium
+
+### Preconditions:
   - Swag Labs is open in Firefox.
   - The application state has been reset.
   - The user is logged out.
-- **Test Data:**
+
+### Test Data:
   - Username: `standard_user`
   - Password: `secret_sauce`
-  - Product: Sauce Labs Bike Light
-- **Steps:**
+  - Product: Test.allTheThings() T-Shirt (Red)
+    
+### Steps:
   1. Log in as `standard_user`.
-  2. Add Sauce Labs Bike Light to the cart.
+  2. Add Test.allTheThings() T-Shirt (Red) to the cart.
   3. Open the cart.
   4. Select Checkout.
   5. Select Cancel.
-- **Expected Result:** The application returns to the cart without completing checkout, and the product remains in the cart.
-- **Actual Result:**
-- **Status:**
-- **Evidence:**
+     
+### Expected Result:
+- The application returns to the cart without completing checkout, and the product remains in the cart.
+
+### Actual Result:
+- The application returns to the cart without completing checkout, and the product remains in the cart.
+
+### Status: PASS
+
+### Evidence:
 
 ## TC-11 — Shopper can continue shopping from the cart
 
-- **Requirement/Risk:** Navigation risk
-- **Priority:** Medium
-- **Preconditions:**
+### Requirement/Risk: Navigation risk
+
+### Priority: Medium
+
+### Preconditions:
   - Swag Labs is open in Firefox.
   - The application state has been reset.
   - The user is logged out.
-- **Test Data:**
+    
+### Test Data:
   - Username: `standard_user`
   - Password: `secret_sauce`
-  - Product: Sauce Labs Bike Light
-- **Steps:**
+  - Product: Sauce Labs Bolt T-Shirt
+  - 
+### Steps:
   1. Log in as `standard_user`.
-  2. Add Sauce Labs Bike Light to the cart.
+  2. Add Sauce Labs Bolt T-Shirt to the cart.
   3. Open the cart.
   4. Select Continue Shopping.
-- **Expected Result:** The application returns to the inventory page and the cart still contains Sauce Labs Bike Light.
-- **Actual Result:**
-- **Status:**
-- **Evidence:**
+     
+### Expected Result:
+- The application returns to the inventory page and the cart still contains Sauce Labs Bike Light.
+  
+### Actual Result:
+- The application returns to the inventory page and the cart still contains Sauce Labs Bike Light.
+
+### Status: PASS
+
+### Evidence:
 
 ## TC-12 — Shopper can remove an item from the cart
 
-- **Requirement/Risk:** Cart integrity risk
-- **Priority:** Medium
-- **Preconditions:**
+### Requirement/Risk: Cart integrity risk
+### Priority: Medium
+
+### Preconditions:
   - Swag Labs is open in Firefox.
   - The application state has been reset.
   - The user is logged out.
-- **Test Data:**
+    
+### Test Data:
   - Username: `standard_user`
   - Password: `secret_sauce`
-  - Product: Sauce Labs Bike Light
-- **Steps:**
+  - Product: Sauce Labs Backpack
+    
+### Steps:
   1. Log in as `standard_user`.
-  2. Add Sauce Labs Bike Light to the cart.
+  2. Add Sauce Labs Backpack to the cart.
   3. Open the cart.
-  4. Select Remove for Sauce Labs Bike Light.
-- **Expected Result:** Sauce Labs Bike Light is removed, the cart shows no product, and the cart badge is no longer displayed.
-- **Actual Result:**
-- **Status:**
-- **Evidence:**
+  4. Select Remove for Sauce Labs Backpack.
+     
+### Expected Result:
+- Sauce Labs Backpack is removed, the cart shows no product, and the cart badge is no longer displayed.
+
+### Actual Result:
+- Sauce Labs Backpack is removed, the cart shows no product, and the cart badge is no longer displayed.
+
+### Status: PASS
+
+### Evidence:
