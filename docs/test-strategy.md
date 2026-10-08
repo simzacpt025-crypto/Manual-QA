@@ -2,7 +2,7 @@
 
 ## Test Object
 
-The Swag Labs login-to-checkout journey in Microsoft Edge.
+The Swag Labs login-to-checkout journey in Firefox.
 
 ## Test Basis
 
