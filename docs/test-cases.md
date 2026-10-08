@@ -194,8 +194,8 @@
 - **Requirement/Risk:** Validation risk
 - **Priority:** Medium
 - **Preconditions:**
-  - Swag Labs is open in Microsoft Edge.
-  - The application state has been reset.
+  - Swag Labs is open in Firefox.
+  - Application state has been reset.
   - The user is logged out.
 - **Test Data:**
   - Username: `standard_user`
@@ -223,7 +223,7 @@
 - **Requirement/Risk:** Validation risk
 - **Priority:** Medium
 - **Preconditions:**
-  - Swag Labs is open in Microsoft Edge.
+  - Swag Labs is open in Firefox.
   - The application state has been reset.
   - The user is logged out.
 - **Test Data:**
@@ -252,7 +252,7 @@
 - **Requirement/Risk:** Validation risk
 - **Priority:** High
 - **Preconditions:**
-  - Swag Labs is open in Microsoft Edge.
+  - Swag Labs is open in Frefox.
   - The application state has been reset.
   - The user is logged out.
 - **Test Data:**
@@ -279,7 +279,7 @@
 - **Requirement/Risk:** Navigation risk
 - **Priority:** Medium
 - **Preconditions:**
-  - Swag Labs is open in Microsoft Edge.
+  - Swag Labs is open in Firefox.
   - The application state has been reset.
   - The user is logged out.
 - **Test Data:**
@@ -302,7 +302,7 @@
 - **Requirement/Risk:** Navigation risk
 - **Priority:** Medium
 - **Preconditions:**
-  - Swag Labs is open in Microsoft Edge.
+  - Swag Labs is open in Firefox.
   - The application state has been reset.
   - The user is logged out.
 - **Test Data:**
@@ -324,7 +324,7 @@
 - **Requirement/Risk:** Cart integrity risk
 - **Priority:** Medium
 - **Preconditions:**
-  - Swag Labs is open in Microsoft Edge.
+  - Swag Labs is open in Firefox.
   - The application state has been reset.
   - The user is logged out.
 - **Test Data:**
