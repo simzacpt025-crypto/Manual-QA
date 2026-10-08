@@ -40,7 +40,7 @@ Entering a last name overwrites the first-name field for `problem_user`.
 
 ## Steps to Reproduce
 
-1. Open Swag Labs in Microsoft Edge.
+1. Open Swag Labs in Firefox.
 2. Reset the application state.
 3. Log out to start from a clean login state.
 4. Log in using `problem_user` and `secret_sauce`.
